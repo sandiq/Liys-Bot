@@ -36,7 +36,8 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const path = require('path')
 const yts = require('yt-search')
-const ytdl = require("@distube/ytdl-core");
+const ytdl = require("ytdl-core");
+const agent = ytdl.createAgent(JSON.parse(fs.readFileSync("./src/cookies.json")));
 const { pipeline } = require("stream")
 const { promisify } = util;
 const streamPipeline = promisify(pipeline)
@@ -1440,6 +1441,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			  }
         const vid = search.videos[0];
         const { title, thumbnail, author, views, ago, url, seconds } = vid;
+	await ytdl.getInfo(url, { agent });
         const caption = `╭━━━━°「 *Youtube Download* 」°━━━━\n┃ ▢ *Author:* ${author.name}\n┃ ▢ *Title:* ${title}\n┃ ▢ *Publish:* ${ago}\n┃ ▢ *Views:* ${views}\n┃ ▢ *Url:* ${url}\n╰––––––━═┅═━––––––๑`
         if (seconds > 3600) {
           await m.reply('durasinya terlalu panjang video tidak di download !')
@@ -1520,6 +1522,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			  }
         const vid = search.videos[0];
         const { title, thumbnail, author, views, ago, url, seconds } = vid;
+	await ytdl.getInfo(url, { agent });
         const caption = `╭━━━━°「 *Youtube Download* 」°━━━━\n┃ ▢ *Author:* ${author.name}\n┃ ▢ *Title:* ${title}\n┃ ▢ *Publish:* ${ago}\n┃ ▢ *Views:* ${views}\n┃ ▢ *Url:* ${url}\n╰––––––━═┅═━––––––๑`
         if (seconds > 3600) {
           await m.reply('durasinya terlalu panjang vid/aud tidak di download !')
