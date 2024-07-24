@@ -730,7 +730,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 		    else m.reply("❌ jawaban Salah !")
 		  }
 		}
-		if (global.db.data) await global.db.write();
 
 		switch (command) {
 			//======================================//
@@ -1090,7 +1089,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1111,7 +1109,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			    jawaban: json.jawaban,
 			    terjawab: Array.from(json.jawaban, () => false),
 			  }
-			  if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1134,7 +1131,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1157,7 +1153,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1180,7 +1175,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1203,7 +1197,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1226,7 +1219,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1249,7 +1241,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1279,7 +1270,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1302,7 +1292,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
@@ -1325,7 +1314,6 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			      }
 			    }, 120000)
 			   ]
-			   if (global.db.data) await global.db.write();
 			}
 			break
 			//======================================//
