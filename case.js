@@ -1967,7 +1967,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			    let user = db.data.users[m.quoted.sender];
 			    if (!user) return m.reply("user tidak terdaftar di Database")
 			    let cap = `╭━━━━°「 *Profile* 」°
-┃• *Name :* ${user.name ? user.name : ptz.getName(v)}
+┃• *Name :* ${user.name ? user.name : ptz.getName(m.quoted.sender)}
 ┊• *Age :* ${user.age !== -1 ? user.age + ' Year' : 'Not Register'}
 ┊• *Gender :* ${user.gender ? myGender(user.gender) : 'Not Register'}
 ┊• *Premium :* ${checkPremiumUser(m.quoted.sender, premium) ? 'Yes' : 'No'}
@@ -1979,7 +1979,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 			    let user = db.data.users[m.sender];
 			    if (!user) return m.reply("user tidak terdaftar di Database")
 			    let cap = `╭━━━━°「 *Profile* 」°
-┃• *Name :* ${user.name ? user.name : ptz.getName(v)}
+┃• *Name :* ${user.name ? user.name : ptz.getName(m.sender)}
 ┊• *Age :* ${user.age !== -1 ? user.age + ' Year' : 'Not Register'}
 ┊• *Gender :* ${user.gender ? myGender(user.gender ?? false) : 'Not Register'}
 ┊• *Premium :* ${isPremium ? 'Yes' : 'No'}
@@ -2110,7 +2110,7 @@ module.exports = ptz = async (ptz, m, chatUpdate, store) => {
 				if (global.db.data) await global.db.write();
 				let cap = `╭━━━━°「 *Informasi* 」°
 ┃• *Name :* ${nama}
-┊• *Gender :* ${age} Tahun
+┊• *Gender :* ${myGender(gender ?? false)} Tahun
 ┊• *Age :* ${age} Tahun
 ┊• *Success :* Yes
 ┃• *SN :* ${sn}
