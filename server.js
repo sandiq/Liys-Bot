@@ -14,7 +14,7 @@ const app = global.app = express();
 
 // Function to keep the server alive
 function keepAlive() {
-  const url = `https://${process.env.KOYEB_PUBLIC_DOMAIN || 'www.google.com'}`;
+  const url = `https://www.google.com`;
   const url2 = 'https://m.facebook.com';
   if (/(\/\/|\.)undefined\./.test(url)) return;
   setInterval(() => {
